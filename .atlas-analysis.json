@@ -1,0 +1,124 @@
+{
+  "projectType": "api-service",
+  "projectName": "Threadly Server",
+  "projectDescription": "A robust social media backend API inspired by Instagram, featuring authentication, posts, stories, real-time messaging, and social interactions.",
+  "theme": "aspen",
+  "primaryColor": "#aebd57",
+  "lightColor": "#26272c",
+  "darkColor": "#dbdbdd",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "authentication",
+              "configuration",
+              "database-schema"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "real-time",
+              "media-upload",
+              "notifications"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": [
+              "api-reference/otp",
+              "api-reference/auth",
+              "api-reference/password-reset"
+            ]
+          },
+          {
+            "group": "Users & Profile",
+            "pages": [
+              "api-reference/users",
+              "api-reference/profile",
+              "api-reference/privacy"
+            ]
+          },
+          {
+            "group": "Content",
+            "pages": [
+              "api-reference/posts",
+              "api-reference/stories"
+            ]
+          },
+          {
+            "group": "Social Interactions",
+            "pages": [
+              "api-reference/likes",
+              "api-reference/comments",
+              "api-reference/follows"
+            ]
+          },
+          {
+            "group": "Messaging",
+            "pages": [
+              "api-reference/messages"
+            ]
+          },
+          {
+            "group": "Additional",
+            "pages": [
+              "api-reference/fcm",
+              "api-reference/search",
+              "api-reference/admin"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-method authentication (Mobile, Email, UserID) with OTP verification",
+    "Post and story management with image/video support",
+    "Social graph with follow/unfollow and privacy controls",
+    "Real-time messaging with Socket.io",
+    "Push notifications via Firebase Cloud Messaging",
+    "Cloudinary integration for media storage",
+    "Like, comment, and reply functionality",
+    "Admin panel APIs for content moderation"
+  ],
+  "publicApiSurface": [
+    "POST /api/auth/register/mobile",
+    "POST /api/auth/register/email",
+    "POST /api/auth/login/mobile",
+    "POST /api/auth/login/email",
+    "POST /api/auth/login/userid",
+    "POST /api/posts/addImagePost",
+    "POST /api/posts/addVideoPost",
+    "GET /api/posts/getImagePostsFeed",
+    "GET /api/posts/getVideoPostsFeed",
+    "GET /api/like/likePost/:postid",
+    "POST /api/comment/addComment",
+    "POST /api/follow/follow",
+    "GET /api/follow/getFollowers/:userid",
+    "POST /api/messages/sendMessage",
+    "GET /api/messages/getAllChats",
+    "POST /api/story/addStory",
+    "GET /api/story/getStories",
+    "GET /api/users/getUser/:userid",
+    "PATCH /api/profile/edit/username",
+    "GET /api/privacy/setPrivate"
+  ]
+}
